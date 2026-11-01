@@ -12,7 +12,7 @@ Neste projeto iremos desenvolver um sistemas para usuários de uma academia, con
 
 ## Professor
 
-* Jardell Fillipe da Silva
+* Jardell Fillipe da Silva           
 
 ## Objetivos
 
