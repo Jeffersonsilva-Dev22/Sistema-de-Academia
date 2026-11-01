@@ -110,7 +110,7 @@ PlanoPrata (Básico): Acesso 5 dias por semana e direito a 1 aula por mês de li
 
 Pagamento:
 
-Papel: Controla a situação financeira da mensalidade, permitindo verificar se o status está ativo ou inativo e disparar cobranças.
+Papel: Controla a situação financeira da mensalidade, permitindo verificar se o status está ativo ou inativo e disparar cobranças. 
 
 FichaTreino:
 
