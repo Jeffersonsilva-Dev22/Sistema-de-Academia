@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100b16">
+<title>NexusFit Academia</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <a href="#inicio" class="brand" aria-label="NexusFit, início"><img src="assets/logo.png" alt=""><span>NEXUS<strong>FIT</strong><small>ACADEMIA</small></span></a>
+  <nav aria-label="Navegação principal">
+    <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#planos">Planos</a>
+    <button type="button" class="outline" data-open="login">Entrar <span aria-hidden="true">↗</span></button>
+  </nav>
+</header>
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="hero-photo"></div>
+    <div class="wrap hero-content">
+      <p class="eyebrow">NEXUSFIT ACADEMIA</p>
+      <h1 id="titulo">TREINE FORTE.<br><em>VÁ ALÉM.</em></h1>
+      <p class="intro">Na NexusFit, cada treino é um passo para superar limites, ganhar força e evoluir.</p>
+      <div class="actions"><a class="button" href="#planos">Seja um membro <span aria-hidden="true">↗</span></a><a class="secondary" href="#servicos">Conheça a academia <span aria-hidden="true">↓</span></a></div>
+    </div>
+  </section>
+  <section class="wrap section" id="servicos">
+    <h2>Conheça os serviços</h2>
+    <div class="cards">
+      <article><span class="symbol" aria-hidden="true">✦</span><h3>Musculação</h3><p>Treine força com exercícios adaptados ao seu objetivo.</p></article>
+      <article><span class="symbol" aria-hidden="true">↗</span><h3>Bike e Box</h3><p>Varie sua rotina com aulas de bike e box nos planos Ouro e Diamante.</p></article>
+      <article><span class="symbol" aria-hidden="true">◎</span><h3>Avaliação física</h3><p>Acompanhe sua evolução com avaliações registradas pelo instrutor.</p></article>
+    </div>
+  </section>
+  <section class="plans section" id="planos">
+    <div class="wrap">
+      <div class="section-head"><h2>Escolha seu plano</h2><div class="periods" role="group" aria-label="Duração do plano"><button aria-pressed="true" data-period="mensal">Mensal</button><button aria-pressed="false" data-period="trimestral">Trimestral</button><button aria-pressed="false" data-period="anual">Anual</button></div></div>
+      <div class="cards" id="planCards" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+<footer class="wrap footer"><a href="#inicio">NexusFit Academia</a><button type="button" class="secondary" data-open="login">Área do aluno ↗</button></footer>
+<dialog id="account" aria-labelledby="dialogTitle">
+  <div class="dialog-layout">
+    <div class="dialog-art" aria-hidden="true"><img src="assets/logo.png" alt=""></div>
+    <div class="dialog-body">
+      <button type="button" id="closeAccount" class="close" aria-label="Fechar">×</button>
+      <h2 id="dialogTitle"></h2>
+      <p id="dialogIntro"></p>
+      <form id="accountForm">
+        <label id="nameField" hidden>Nome<input name="nome" autocomplete="name" maxlength="120"></label>
+        <label><span id="loginLabel"></span><input name="login" required autocomplete="username" maxlength="160"></label>
+        <label id="cpfField" hidden>CPF<input name="cpf" inputmode="numeric" maxlength="14"></label>
+        <label>Senha<input name="senha" type="password" required></label>
+        <button class="button" id="submitAccount" type="submit"></button>
+      </form>
+      <button class="secondary" type="button" id="switchMode"></button>
+      <p class="feedback" id="feedback" role="status"></p>
+    </div>
+  </div>
+</dialog>
+</body>
+</html>

@@ -1,0 +1,74 @@
+:root{color-scheme:dark;--bg:#100b16;--panel:#191120;--line:#342540;--ink:#faf6ff;--muted:#c5b8ce;--accent:#c479ff;--button:#a34cf0;--heading:"Franklin Gothic Heavy","Arial Black",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid #e3b3ff;outline-offset:4px}
+.wrap{width:min(1160px,calc(100% - 96px));margin-inline:auto}
+.header{height:84px;display:flex;justify-content:space-between;align-items:center;padding-inline:max(48px,calc((100% - 1160px)/2));border-bottom:1px solid #ffffff1a;background:#100b16;gap:24px}
+.brand{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:500;line-height:1;letter-spacing:-.04em}
+.brand strong{font-weight:900;color:#e1adff}
+.brand small{display:block;font-size:8px;letter-spacing:.37em;margin-top:6px;color:var(--muted)}
+.brand img{width:65px;mix-blend-mode:screen;filter:brightness(2.3)}
+nav{display:flex;align-items:center;gap:32px;font-size:.9rem;font-weight:650}
+nav a:hover,.secondary:hover{color:var(--accent)}
+.outline,.secondary{color:var(--ink);background:none;border:0}
+.outline{border:1px solid #9562bb;border-radius:6px;padding:8px 16px}
+.outline span{margin-left:.4rem;color:var(--accent)}
+.hero{min-height:clamp(560px,75svh,780px);position:relative;isolation:isolate;display:grid;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-photo{position:absolute;z-index:-1;inset:0 0 0 35%;background:url('assets/academia.jpg') center 53% / cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#100b16 25%,#100b16f2 37%,#100b1670 62%,#100b1612 100%),linear-gradient(0deg,#100b16 0%,transparent 29%);pointer-events:none}
+.hero-content{padding-block:70px}
+.eyebrow{color:#deb0ff;font-size:.76rem;font-weight:750;letter-spacing:.24em;margin:0 0 20px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--accent)}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:var(--heading);line-height:1.02}
+h1{font-size:clamp(3.25rem,8.1vw,7rem);letter-spacing:-.075em;margin-bottom:24px}
+h1 em{color:var(--accent);font-style:normal}
+.intro{color:#e0d6e9;max-width:410px;font-size:1.08rem;margin-bottom:28px}
+.actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.button{display:inline-flex;justify-content:center;align-items:center;gap:19px;padding:13px 20px;border-radius:6px;border:1px solid transparent;background:var(--button);color:#10051b;font-weight:850}
+.button:hover{background:#cb8aff}
+.secondary{padding:0;font-size:.91rem;font-weight:700}
+.secondary span{margin-left:6px;color:var(--accent)}
+.section{padding-block:72px}
+h2{font-size:clamp(2rem,4.4vw,3.6rem);letter-spacing:-.06em;margin-bottom:27px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+article{display:flex;flex-direction:column;background:linear-gradient(140deg,#23152e,var(--panel));border:1px solid var(--line);border-radius:12px;padding:24px}
+article h3{font-size:1.4rem;margin-bottom:12px}
+article p{color:var(--muted);margin-bottom:0}
+.symbol{color:var(--accent);font-size:1.7rem;margin-bottom:16px}
+.plans{background:#120d19;border-block:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.periods{display:flex;gap:3px;padding:4px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.periods button{border:0;border-radius:5px;background:none;color:var(--muted);padding:6px 10px;font-size:.85rem}
+.periods button[aria-pressed=true]{background:#462457;color:#fff}
+.price{color:var(--ink);font-size:1.8rem;font-weight:850;margin-bottom:10px}
+.price small{font-size:.84rem;color:var(--muted);font-weight:500}
+.plan .button{margin-top:auto;align-self:flex-start}
+.plan .benefits{margin-bottom:22px}
+.plan.featured{border-color:#9a4bca}
+.footer{display:flex;justify-content:space-between;gap:16px;padding-block:26px;color:var(--muted);font-size:.9rem}
+dialog{width:min(720px,calc(100% - 24px));max-height:90svh;padding:0;color:var(--ink);background:#191020;border:1px solid #73409c;border-radius:14px}
+dialog::backdrop{background:#08040bd9;backdrop-filter:blur(7px)}
+.dialog-layout{display:grid;grid-template-columns:1fr 1.35fr}
+.dialog-art{display:grid;place-items:center;background:linear-gradient(#21063635,#0d0612cc),url('assets/academia.jpg') center / cover}
+.dialog-art img{width:88%;mix-blend-mode:screen;filter:brightness(2)}
+.dialog-body{position:relative;padding:35px 28px 23px}
+.dialog-body h2{margin-bottom:12px;font-size:2rem}
+.dialog-body p{color:var(--muted);font-size:.92rem}
+.close{position:absolute;right:12px;top:8px;color:var(--ink);background:none;border:0;font-size:1.6rem}
+form{display:grid;gap:12px;margin-bottom:13px}
+[hidden]{display:none!important}
+label{display:grid;gap:4px;font-size:.86rem}
+input{background:#100b16;color:var(--ink);border:1px solid #5e466d;border-radius:5px;padding:9px;width:100%}
+.feedback:empty{display:none}
+.feedback{border-left:2px solid var(--accent);margin:14px 0 0;padding-left:10px}
+@media(max-width:700px){
+.wrap{width:calc(100% - 36px)}.header{height:auto;min-height:72px;padding:8px 18px;gap:8px}.brand img{width:40px}.brand{font-size:16px}.brand small{font-size:6px}nav{gap:12px;font-size:.8rem}.outline{padding:5px 8px}.outline span{display:none}
+.hero{min-height:590px;align-items:end}.hero-photo{inset:0;background-position:center top}.hero::after{background:linear-gradient(0deg,#100b16 2%,#100b16ef 39%,#100b1640 100%)}.hero-content{padding-block:55px}.section{padding-block:48px}.cards{grid-template-columns:1fr}.dialog-layout{grid-template-columns:1fr}.dialog-art{display:none}
+}
+@media(max-width:390px){nav a[href="#inicio"]{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
